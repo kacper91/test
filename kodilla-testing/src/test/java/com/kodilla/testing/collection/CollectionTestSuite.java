@@ -16,36 +16,34 @@ public class CollectionTestSuite {
     }
 
     @Test
-    public void testOddNumbersExterminatorNormalList (){
-        //Given
-        ArrayList <Integer> numbers = new ArrayList<Integer>();
+    public void testOddNumbersExterminatorNormalList () {
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
         numbers.add(2);
         numbers.add(3);
         numbers.add(4);
         numbers.add(5);
         numbers.add(4);
 
+        //Given
         OddNumbersExterminator tester = new OddNumbersExterminator();
-        if(tester.exterminate(numbers)==3) {
-            System.out.println("testOddNumbersExterminatorNormalList - OK");
-        }else{
-            System.out.println("testOddNumbersExterminatorNormalList - ERROR");
 
-        }
+        //When
+        System.out.println("Start testing testOddNumbersExterminatorNormalList..");
+
+        //Then
+        Assert.assertEquals(tester.exterminate(numbers),3);
     }
-
     @Test
-    public void testOddNumbersExterminatorEmptyList (){
-        ArrayList <Integer> emptyList = new ArrayList<Integer>();
+    public void testOddNumbersExterminatorEmptyList () {
+        ArrayList<Integer> emptyList = new ArrayList<Integer>();
+
+        //Given
         OddNumbersExterminator tester = new OddNumbersExterminator();
-        if(tester.exterminate(emptyList)==0){
 
-            System.out.println("testOddNumbersExterminatorEmptyList - OK");
-        }else{
-            System.out.println("testOddNumbersExterminatorEmptyList - ERROR");
+        //When
+        System.out.println("Start testing testOddNumbersExterminatorEmptyList..");
 
-        };
-
+        //Then
+        Assert.assertEquals(tester.exterminate(emptyList),0);
     }
-
 }
