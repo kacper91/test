@@ -1,8 +1,6 @@
 package com.kodilla.testing.collection;
 import com.kodilla.testing.collection.OddNumbersExterminator;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import java.util.*;
 
 public class CollectionTestSuite {
