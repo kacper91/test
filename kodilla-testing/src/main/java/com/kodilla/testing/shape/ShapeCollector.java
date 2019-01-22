@@ -2,18 +2,8 @@ package com.kodilla.testing.shape;
 
 import java.util.*;
 
-interface Shape {
-    String getShapeName();
-    double getField();
-}
-
 public class ShapeCollector {
 
-
-
-    public ShapeCollector(Shape shape) {
-
-    }
     List<Shape> shapeCollection = new ArrayList<>();
 
 

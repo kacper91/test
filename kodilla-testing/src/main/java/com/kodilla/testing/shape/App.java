@@ -7,7 +7,7 @@ public class App {
         Circle circleOne = new Circle("nameForNewCircle", 30.5);
         Triangle triangleOne = new Triangle("nameForNewTriangle", 40.5);
         Square squareOne = new Square("nameForNewSquare", 66);
-        ShapeCollector newShape = new ShapeCollector(circleOne);
+        ShapeCollector newShape = new ShapeCollector();
 
         newShape.addFigure(circleOne);
         newShape.addFigure(triangleOne);
