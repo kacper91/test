@@ -1,10 +1,4 @@
 package com.kodilla.testing.shape;
-
-import com.kodilla.testing.shape.ShapeCollector;
-import com.kodilla.testing.shape.Shape;
-import com.kodilla.testing.shape.Triangle;
-import com.kodilla.testing.shape.Square;
-import com.kodilla.testing.shape.Circle;
 import org.junit.*;
 
 import java.util.ArrayList;
@@ -12,7 +6,6 @@ import java.util.List;
 
 
 public class ShapeCollectorTestSuite {
-    private static int counter = 0;
 
     @Test
     public void testAddFigure() {
@@ -46,7 +39,7 @@ public class ShapeCollectorTestSuite {
         shapeCollection.add(squareOne);
         shapeCollection.add(circleOne);
         //When
-        shapeCollection.remove(triangleOne);
+        shapeCollection.remove(1);
         int result = shapeCollection.size();
         //Then
         Assert.assertEquals(result,5);
