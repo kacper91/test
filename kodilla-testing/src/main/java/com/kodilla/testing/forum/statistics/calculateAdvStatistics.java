@@ -1,8 +1,9 @@
 package com.kodilla.testing.forum.statistics;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class calculateAdvStatistics {
+public class calculateAdvStatistics implements Statistics{
 
     private int postsCount;
     private int commentsCount;
@@ -17,12 +18,16 @@ public class calculateAdvStatistics {
         return userCount = userNames.size();
     }
 
-    public void postsCount(int postsCount) {
-        this.postsCount = postsCount;
+    public int postsCount() {
+        return postsCount;
     }
 
-    public void commentsCount(int commentsCount) {
-        this.commentsCount = commentsCount;
+    public int commentsCount() {
+        return commentsCount;
+    }
+
+    public List<String> userNames(){
+        return userNames;
     }
 
     public void calculateAdvStatistics(Statistics statistics) {
