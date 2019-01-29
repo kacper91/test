@@ -32,7 +32,7 @@ public class CalculateStats {
     }
 
     @Test
-    public void TestCalculateAdvStatisticsNoPost() {
+    public void testCalculateAdvStatisticsNoPost() {
 
         //Given
         calculator = new calculateAdvStatistics();
@@ -48,7 +48,7 @@ public class CalculateStats {
     }
 
     @Test
-    public void TestCalculateAdvStatistics1000Posts() {
+    public void testCalculateAdvStatistics1000Posts() {
         //Given
         List<String> userNames = new ArrayList<>();
         userNames.add("Mariusz");
@@ -67,7 +67,7 @@ public class CalculateStats {
     }
 
     @Test
-    public void TestCalculateAdvStatistics0Comments() {
+    public void testCalculateAdvStatistics0Comments() {
 
         //Given
         List<String> userNames = new ArrayList<>();
@@ -84,7 +84,7 @@ public class CalculateStats {
     }
 
     @Test
-    public void TestCalculateAdvStatistics0users() {
+    public void testCalculateAdvStatistics0users() {
 
         //Given
         List<String> userNames = new ArrayList<>();
@@ -100,7 +100,7 @@ public class CalculateStats {
     }
 
     @Test
-    public void TestCalculateAdvStatistics100users() {
+    public void testCalculateAdvStatistics100users() {
 
         //Given
         List<String> userNames = new ArrayList<>();
@@ -118,7 +118,7 @@ public class CalculateStats {
     }
 
     @Test
-    public void TestCalculateAdvStatisticsPostMore() {
+    public void testCalculateAdvStatisticsPostMore() {
 
         //Given
 
@@ -137,7 +137,7 @@ public class CalculateStats {
     }
 
     @Test
-    public void TestCalculateAdvStatisticsCommMore() {
+    public void testCalculateAdvStatisticsCommMore() {
 
         //Given
 
