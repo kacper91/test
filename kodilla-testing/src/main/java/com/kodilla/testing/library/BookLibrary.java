@@ -21,19 +21,7 @@ public class BookLibrary {
     }
 
     public List<Book> listBookInHandsOf(LibraryUser libraryUser) {
-        int n = 0;
-        List<Book> bookListInHandsOf = new ArrayList<>();
-
-        if (bookListInHandsOf.size() == 0) {
-            return bookListInHandsOf;
-        }
-
-        if (bookListInHandsOf.size() != 0) {
-            for (n = 0, n < bookListInHandsOf.size(), n++) {
-                bookListInHandsOf.get(n);
-            }
-
-        }
+        return libraryDatabase.listBooksInHandsOf(libraryUser);
 
 
     }
