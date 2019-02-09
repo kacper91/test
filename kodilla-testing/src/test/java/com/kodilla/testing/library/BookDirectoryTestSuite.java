@@ -99,9 +99,10 @@ public class BookDirectoryTestSuite {
         //Given
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         List<Book> booksInHandOf = generateListOfNBooks(0);
-        int booksOff = booksInHandOf.size(); //ksiazki wypozyczone
+
 
         //When
+        int booksOff = booksInHandOf.size(); //ksiazki wypozyczone
         if (booksOff == 0) {
 
             System.out.println("no books in hand off");
