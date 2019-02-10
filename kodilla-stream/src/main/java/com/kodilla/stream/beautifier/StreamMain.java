@@ -6,7 +6,6 @@ public class StreamMain {
 
         PoemBeautifier test1 = new PoemBeautifier();
 
-
         test1.beautify("testString", textToDecorate -> textToDecorate + "abc");
         test1.beautify("testStringNo2", textToDecorate -> "abc" + textToDecorate);
         test1.beautify("testStringNo3", textToDecorate -> textToDecorate.toUpperCase());
