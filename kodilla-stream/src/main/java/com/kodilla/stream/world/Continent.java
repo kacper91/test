@@ -1,18 +1,11 @@
 package com.kodilla.stream.world;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 
 public final class Continent {
-    private String continentName;
-    private Country country;
+    public List<Country> countries;
 
-    public Continent(Country country ){
-        this.country=country;
+    public Continent(List <Country> countries){
+        this.countries=countries;
     }
-    List<Continent> Europe = new ArrayList<>();
-    List<Continent> Africa = new ArrayList<>();
-    List<Continent> Asia = new ArrayList<>();
-
 }

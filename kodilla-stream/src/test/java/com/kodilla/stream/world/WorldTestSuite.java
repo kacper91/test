@@ -29,67 +29,29 @@ public class WorldTestSuite {
         Country kongo = new Country("Kongo", new BigDecimal("81300000"));
 
         //When
-        List<Country> countryList = new ArrayList<>();
-        countryList.add(poland);
-        countryList.add(ukraine);
-        countryList.add(france);
-        countryList.add(spain);
-        countryList.add(luxemburg);
-        countryList.add(japan);
-        countryList.add(southkorea);
-        countryList.add(armenia);
-        countryList.add(ghana);
-        countryList.add(angola);
-        countryList.add(kongo);
+        List<Country> countries = new ArrayList<>();
+        countries.add(poland);
+        countries.add(ukraine);
+        countries.add(france);
+        countries.add(spain);
+        countries.add(luxemburg);
+        countries.add(japan);
+        countries.add(southkorea);
+        countries.add(armenia);
+        countries.add(ghana);
+        countries.add(angola);
+        countries.add(kongo);
 
+
+        BigDecimal totalQuantity = countries.stream()
+                .map(Country::getPeopleQuantity)
+                .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));
         //Then
-        int size = countryList.size();
-        Assert.assertEquals(size, 11);
+
+        Assert.assertEquals(totalQuantity, new BigDecimal (519490000));
 
     }
 
-    @Test
-    public void testContinent() {
-        //Given
-        Continent eur1 = new Continent(new Country("Poland", new BigDecimal("40000000")));
-        Continent eur2 = new Continent(new Country("Ukraine", new BigDecimal("44000000")));
-        Continent eur3 = new Continent(new Country("France", new BigDecimal("67000000")));
-        Continent eur4 = new Continent(new Country("Spain", new BigDecimal("46000000")));
-        Continent eur5 = new Continent(new Country("Luxemburg", new BigDecimal("590000")));
-
-        Continent afr1 = new Continent(new Country("Ghana", new BigDecimal("28900000")));
-        Continent afr2 = new Continent(new Country("Angola", new BigDecimal("29800000")));
-        Continent afr3 = new Continent(new Country("Kongo", new BigDecimal("81300000")));
-
-        Continent asia1 = new Continent(new Country("Japan", new BigDecimal("126000000")));
-        Continent asia2 = new Continent(new Country("South Korea", new BigDecimal("51400000")));
-        Continent asia3 = new Continent(new Country("Armenia", new BigDecimal("4500000")));
-
-        List<Continent> Europe = new ArrayList<>();
-        List<Continent> Africa = new ArrayList<>();
-        List<Continent> Asia = new ArrayList<>();
-
-        Europe.add(eur1);
-        Europe.add(eur2);
-        Europe.add(eur3);
-        Europe.add(eur4);
-        Europe.add(eur5);
-        Africa.add(afr1);
-        Africa.add(afr2);
-        Africa.add(afr3);
-        Asia.add(asia1);
-        Asia.add(asia2);
-        Asia.add(asia3);
-
-
-    }
-
-    @Test
-    public void testGetPeopleOfContinent() {
-
-
-
-    }
 
 }
 
