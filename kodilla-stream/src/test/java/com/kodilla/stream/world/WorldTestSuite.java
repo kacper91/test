@@ -82,32 +82,6 @@ public class WorldTestSuite {
         Asia.add(asia3);
 
 
-        //Given
-//        List<Country> europe = new ArrayList<>();
-//        europe.add(new Country("Poland", new BigDecimal("40000000")));
-//        europe.add(new Country("Ukraine", new BigDecimal("44000000")));
-//        europe.add(new Country("France", new BigDecimal("67000000")));
-//        europe.add(new Country("Spain", new BigDecimal("46000000")));
-//        europe.add(new Country("Luxemburg", new BigDecimal("590000")));
-//
-//
-//        List<Country> asia = new ArrayList<>();
-//        asia.add(new Country("Japan", new BigDecimal("126000000")));
-//        asia.add(new Country("South Korea", new BigDecimal("51400000")));
-//        asia.add(new Country("Armenia", new BigDecimal("4500000")));
-//
-//
-//        List<Country> africa = new ArrayList<>();
-//        africa.add(new Country("Ghana", new BigDecimal("28900000")));
-//        africa.add(new Country("Angola", new BigDecimal("29800000")));
-//        africa.add(new Country("Kongo", new BigDecimal("81300000")));
-//        //When
-//        //Then
-//
-//        Assert.assertEquals(europe.size(), 5);
-//        Assert.assertEquals(asia.size(), 3);
-//        Assert.assertEquals(africa.size(), 3);
-
     }
 
     @Test
