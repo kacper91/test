@@ -19,6 +19,7 @@ public final class Country {
         return peopleQuantity;
     }
 
+
     public String toString(){
         return ("Country: "+name + " people: "+peopleQuantity);
     }
