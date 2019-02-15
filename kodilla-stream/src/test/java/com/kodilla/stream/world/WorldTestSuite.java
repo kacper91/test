@@ -42,11 +42,15 @@ public class WorldTestSuite {
         countries.add(kongo);
 
         //When
+        Continent continent = new Continent(countries);
         List<Continent> continents = new ArrayList<>();
+        continents.add(continent);
+
 
         //Then
         World world = new World(continents);
         System.out.println(world.getPeopleQuantity());
+        Assert.assertEquals(new BigDecimal("519490000"), world.getPeopleQuantity());
 
     }
 
