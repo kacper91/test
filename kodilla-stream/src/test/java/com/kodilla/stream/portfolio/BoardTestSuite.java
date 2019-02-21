@@ -126,7 +126,6 @@ public class BoardTestSuite {
         Assert.assertEquals("HQLs for analysis", tasks.get(0).getTitle());
     }
 
-
     @Test
     public void testAddTaskListFindLongTasks() {
         //Given
@@ -141,7 +140,6 @@ public class BoardTestSuite {
                 .map(t -> t.getCreated())
                 .filter(d -> d.compareTo(LocalDate.now().minusDays(10)) <= 0)
                 .count();
-
         //Then
         Assert.assertEquals(2, longTasks);
     }
@@ -150,7 +148,6 @@ public class BoardTestSuite {
     public void testAddTaskListAverageWorkingOnTask() {
         //Given
         Board project = prepareTestData();
-
         LocalDate today = LocalDate.now();
 
         //when
@@ -166,18 +163,14 @@ public class BoardTestSuite {
 
         inProgressTasks.add(new TaskList("In progress"));
 
-
-        Long total = project.getTaskLists().stream()
+        double avg =   project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(t -> t.getTasks().stream())
-                .map(t -> ChronoUnit.DAYS.between(t.getCreated(), LocalDate.now()))
-                .reduce(0L, (sum, t) -> sum + t);
+                .mapToLong(t -> ChronoUnit.DAYS.between(t.getCreated(), LocalDate.now()))
+              .average().getAsDouble();
 
-        double avg = total / countOfElements;
+        //Then
         Assert.assertEquals(avg, 10, 0);
-
-
-        //When
 
 
     }
