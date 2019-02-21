@@ -18,7 +18,6 @@ public class FirstChallenge {
         double result = firstChallenge.divide(3, 0);
         System.out.println(result);
 
-
     }
 }
 
