@@ -1,5 +1,6 @@
 package com.kodilla.exception.test;
 
+import javax.swing.text.StyledEditorKit;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,8 +15,15 @@ public class FlySearching {
         airportMap.put("Washington Airport", true);
         airportMap.put("Krakow Airport", false);
 
-        if (airportMap.get("Chopin Airport") != null) {
-            System.out.println("Airport ready");
+
+        if (airportMap.get(flight.getDepartureAirport()) != null) {
+            System.out.println("The Airport is working");
+
+           if(airportMap.get(flight.getArrivalAirport())){
+               System.out.println("Landing is available");
+           } else {
+               System.out.println("Landing is unavailable");
+           }
 
         } else {
             throw new RouteNotFoundException("error");

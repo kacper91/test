@@ -11,7 +11,7 @@ public class App {
         } catch (Exception e) {
             System.out.println("Airport unavailable");
         } finally {
-            System.out.println("The end of program");
+            System.out.println("\nThe end of program");
 
         }
     }
