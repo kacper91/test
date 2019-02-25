@@ -19,7 +19,7 @@ public class FlySearching {
         if (airportMap.get(flight.getDepartureAirport()) != null) {
             System.out.println("The Airport is working");
 
-            if (airportMap.get(flight.getArrivalAirport())) {
+            if (airportMap.get(flight.getArrivalAirport()) != null) {
                 System.out.println("Landing is available");
             } else {
                 throw new RouteNotFoundException("Landing is unavailable");
