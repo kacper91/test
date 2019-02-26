@@ -16,17 +16,17 @@ public class FlySearching {
         airportMap.put("Krakow Airport", false);
 
 
-        if (airportMap.get(flight.getDepartureAirport()) != null) {
-            System.out.println("The Airport is working");
+        if (airportMap.get(flight.getArrivalAirport()) != null) {
 
-            if (airportMap.get(flight.getArrivalAirport()) != null) {
+            if (airportMap.get(flight.getArrivalAirport())) {
                 System.out.println("Landing is available");
             } else {
-                throw new RouteNotFoundException("Landing is unavailable");
+
+                System.out.println("Landing is not available");
             }
 
         } else {
-            throw new RouteNotFoundException("error");
+            throw new RouteNotFoundException("Landing is unavailable");
         }
     }
 }
