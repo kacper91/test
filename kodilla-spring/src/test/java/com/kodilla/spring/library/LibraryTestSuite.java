@@ -33,7 +33,7 @@ public class LibraryTestSuite {
         Library library = context.getBean(Library.class);
 
         //When
-        library.savteToDb();
+        library.saveToDb();
 
         //Then
         //empty
