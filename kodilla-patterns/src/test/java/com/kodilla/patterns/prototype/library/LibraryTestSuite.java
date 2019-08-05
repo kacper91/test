@@ -18,10 +18,10 @@ public class LibraryTestSuite {
         Book book3 = new Book("Instrukcja", "MR", LocalDate.of(2007, 9, 21));
         Book book4 = new Book("Elementarz", "PL", LocalDate.of(2018, 11, 30));
 
-        library.books.add(book1);
-        library.books.add(book2);
-        library.books.add(book3);
-        library.books.add(book4);
+        library.getBooks().add(book1);
+        library.getBooks().add(book2);
+        library.getBooks().add(book3);
+        library.getBooks().add(book4);
 
         //shallowCopy
 

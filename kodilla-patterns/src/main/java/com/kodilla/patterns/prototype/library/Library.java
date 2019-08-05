@@ -7,7 +7,7 @@ import java.util.Set;
 
 public final class Library extends Prototype{
     private String name;
-     Set<Book> books = new HashSet<>();
+    private Set<Book> books = new HashSet<>();
 
     public Library(String name) {
         this.name = name;
