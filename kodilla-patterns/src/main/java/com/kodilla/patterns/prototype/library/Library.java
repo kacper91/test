@@ -1,7 +1,5 @@
 package com.kodilla.patterns.prototype.library;
 
-import sun.plugin.liveconnect.LiveConnect;
-
 import java.util.HashSet;
 import java.util.Set;
 

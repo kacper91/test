@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-10T15:49:03" hostname="DELL-KACPER" time="0.003">
+  <properties/>
+  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.003"/>
+  <system-out><![CDATA[Library{name='University Library', books=[Book{title='Instrukcja', author='MR', publicationDate=2007-09-21}, Book{title='Elementarz', author='PL', publicationDate=2018-11-30}, Book{title='Ciekawostki', author='KO', publicationDate=2001-06-10}]}
+Library{name='Cloned Library', books=[Book{title='Instrukcja', author='MR', publicationDate=2007-09-21}, Book{title='Elementarz', author='PL', publicationDate=2018-11-30}, Book{title='Ciekawostki', author='KO', publicationDate=2001-06-10}]}
+Library{name='Cloned Library - deepClone', books=[Book{title='Instrukcja', author='MR', publicationDate=2007-09-21}, Book{title='Encyklopedia', author='JK', publicationDate=1999-01-01}, Book{title='Ciekawostki', author='KO', publicationDate=2001-06-10}, Book{title='Elementarz', author='PL', publicationDate=2018-11-30}]}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
