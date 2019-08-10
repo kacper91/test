@@ -31,6 +31,7 @@ public class TaskListDaoTestSuite {
 
         TaskList taskList = new TaskList(NAME, DESCRIPTION);
         taskListDao.save(taskList);
+        int id = taskList.getId();
         String listnameTest = taskList.getListName();
 
         //When
@@ -38,6 +39,9 @@ public class TaskListDaoTestSuite {
 
         //Then
         Assert.assertEquals(NAME, listnameTest);
+
+        //Cleanup
+        taskListDao.deleteById(id);
 
     }
 
