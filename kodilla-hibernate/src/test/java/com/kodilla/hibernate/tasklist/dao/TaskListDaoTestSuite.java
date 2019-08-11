@@ -35,10 +35,10 @@ public class TaskListDaoTestSuite {
         String listnameTest = taskList.getListName();
 
         //When
-        List<TaskList> readTasks = taskListDao.findByListName(listnameTest);
+        String readTasks = taskListDao.findByListName(listnameTest).toString();
 
         //Then
-        Assert.assertEquals(NAME, listnameTest);
+        Assert.assertEquals("["+NAME+"]", readTasks);
 
         //Cleanup
         taskListDao.deleteById(id);
