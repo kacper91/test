@@ -3,26 +3,29 @@ package com.kodilla.hibernate.invoice;
 import com.sun.istack.internal.NotNull;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "PRODUCTS")
 public class Product {
     private int id;
     private String name;
-    private Item item;
+    private List<Item> items = new ArrayList<>();
+
 
     @OneToMany(
             targetEntity = Item.class,
-            mappedBy = "item",
+            mappedBy = "product",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )
-    public Item getItem() {
-        return item;
+    public List<Item> getItems() {
+        return items;
     }
 
-    public void setItem(Item item) {
-        this.item = item;
+    public void setItems(List<Item> items) {
+        this.items = items;
     }
 
 

@@ -25,7 +25,7 @@ public class Invoice {
     @Id
     @GeneratedValue
     @NotNull
-    @Column(name="VOICE_ID", unique = true)
+    @Column(name="ID", unique = true)
     public int getId() {
         return id;
     }
@@ -35,7 +35,7 @@ public class Invoice {
     }
 
     @NotNull
-    @Column(name="INVOICE_NUMBER")
+    @Column(name="NUMBER")
     public String getNumber() {
         return number;
     }
@@ -46,7 +46,7 @@ public class Invoice {
 
     @OneToMany(
             targetEntity = Item.class,
-            mappedBy = "items",
+            mappedBy = "invoice",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )

@@ -4,8 +4,7 @@ import com.sun.istack.internal.NotNull;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
+
 
 @Entity
 @Table(name = "ITEMS")
@@ -18,16 +17,6 @@ public class Item {
     private BigDecimal value;
     private Invoice invoice;
 
-    @ManyToOne
-    @JoinColumn(name = "INVOICELIST_ID")
-    public Invoice getInvoice() {
-        return invoice;
-    }
-
-    public void setInvoice(Invoice invoice) {
-        this.invoice = invoice;
-    }
-
 
     public Item(Product product, BigDecimal price, int quantity, BigDecimal value) {
         this.product = product;
@@ -38,6 +27,16 @@ public class Item {
     }
 
     public Item() {
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "ID")
+    public Invoice getInvoice() {
+        return invoice;
+    }
+
+    public void setInvoice(Invoice invoice) {
+        this.invoice = invoice;
     }
 
 
