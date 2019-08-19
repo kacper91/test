@@ -51,6 +51,9 @@ public class InvoiceDaoTestSuite {
         Item item4 = new Item(product4, new BigDecimal("10"), 40, new BigDecimal("400"));
         Item item5 = new Item(product5, new BigDecimal("1"), 50, new BigDecimal("50"));
 
+
+
+
         itemDao.save(item1);
         itemDao.save(item2);
         itemDao.save(item3);
@@ -66,8 +69,17 @@ public class InvoiceDaoTestSuite {
         itemList2.add(item4);
         itemList2.add(item5);
 
+        product1.setItems(itemList1);
+        product2.setItems(itemList1);
+        product3.setItems(itemList2);
+        product4.setItems(itemList2);
+        product5.setItems(itemList2);
+
         Invoice invoice1 = new Invoice("100/2019", itemList1);
         Invoice invoice2 = new Invoice("101/2019", itemList2);
+
+        invoice1.setItems(itemList1);
+        invoice2.setItems(itemList2);
 
         invoiceDao.save(invoice1);
         invoiceDao.save(invoice2);
