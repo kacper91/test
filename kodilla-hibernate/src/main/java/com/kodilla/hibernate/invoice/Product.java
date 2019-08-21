@@ -13,6 +13,13 @@ public class Product {
     private String name;
     private List<Item> items = new ArrayList<>();
 
+    public Product(String name) {
+        this.name = name;
+    }
+
+    public Product() {
+
+    }
 
     @OneToMany(
             targetEntity = Item.class,
@@ -24,20 +31,6 @@ public class Product {
         return items;
     }
 
-    public void setItems(List<Item> items) {
-        this.items = items;
-    }
-
-
-    public Product(String name) {
-        this.name = name;
-    }
-
-    public Product() {
-
-    }
-
-
     @Id
     @GeneratedValue
     @NotNull
@@ -46,9 +39,6 @@ public class Product {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     @NotNull
     @Column(name = "NAME")
@@ -56,7 +46,16 @@ public class Product {
         return name;
     }
 
-    private void setName(String name) {
+
+    public void setItems(List<Item> items) {
+        this.items = items;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
 }

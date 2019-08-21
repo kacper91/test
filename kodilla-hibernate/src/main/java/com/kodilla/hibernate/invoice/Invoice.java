@@ -19,7 +19,6 @@ public class Invoice {
     }
 
     public Invoice(){
-
     }
 
     @Id
@@ -30,18 +29,10 @@ public class Invoice {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     @NotNull
     @Column(name="NUMBER")
     public String getNumber() {
         return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
     }
 
     @OneToMany(
@@ -56,6 +47,14 @@ public class Invoice {
 
     public void setItems(List<Item> items) {
         this.items = items;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 }
 

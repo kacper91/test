@@ -17,49 +17,37 @@ public class Item {
     private BigDecimal value;
     private Invoice invoice;
 
-
     public Item(Product product, BigDecimal price, int quantity, BigDecimal value) {
         this.product = product;
         this.price = price;
         this.quantity = quantity;
         this.value = value;
-
     }
 
     public Item() {
     }
 
+    @NotNull
     @ManyToOne
-    @JoinColumn(name = "ID")
+    @JoinColumn(name = "INVOICE_ID")
     public Invoice getInvoice() {
         return invoice;
     }
 
-    public void setInvoice(Invoice invoice) {
-        this.invoice = invoice;
-    }
-
-
     @Id
     @GeneratedValue
     @NotNull
-    @Column(name = "ID")
+    @Column(name = "ID", unique = true)
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "PRODUCT_ID")
     public Product getProduct() {
         return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
     }
 
     @NotNull
@@ -68,18 +56,11 @@ public class Item {
         return price;
     }
 
-    private void setPrice(BigDecimal price) {
-        this.price = price;
-    }
 
     @NotNull
     @Column(name = "QUANTITY")
     private int getQuantity() {
         return quantity;
-    }
-
-    private void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 
     @NotNull
@@ -91,4 +72,25 @@ public class Item {
     private void setValue(BigDecimal value) {
         this.value = value;
     }
+
+    public void setInvoice(Invoice invoice) {
+        this.invoice = invoice;
+    }
+
+    private void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    private void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 }
